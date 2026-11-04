@@ -4,8 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://g1gh20wt4llx" path="res://assets/modelagens/cidade_contraTempo_predios_textura.png" id="2_6qmdn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hrftm"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+sky_top_color = Color(0.31070226, 0.5061255, 0.84415156, 1)
+sky_horizon_color = Color(0.2747651, 0.6921117, 0.96653813, 1)
+ground_bottom_color = Color(0.12992242, 0.10702764, 0.08126385, 1)
+ground_horizon_color = Color(0.49098802, 0.709644, 0.78127897, 1)
+ground_curve = 0.005176329
+sun_curve = 0.16643538
 
 [sub_resource type="Sky" id="Sky_6qmdn"]
 sky_material = SubResource("ProceduralSkyMaterial_hrftm")
@@ -98,7 +102,8 @@ shadow_mesh = SubResource("ArrayMesh_grkrf")
 environment = SubResource("Environment_qlh45")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=773054815]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8660254, -0.43301278, 0.24999999, 0.2564967, 0.044451326, 0.9655224, -0.42919636, 0.900291, 0.07257038, 0, 0, 0)
+light_color = Color(0.58783966, 0.78094506, 0.8919321, 1)
 shadow_enabled = true
 
 [node name="Player_carro" parent="." unique_id=1212637723 instance=ExtResource("1_hrftm")]
