@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cafwdv0ob2oxd"]
 
 [ext_resource type="PackedScene" uid="uid://hqbvlfh0seea" path="res://scenes/player_carro.tscn" id="1_hrftm"]
+[ext_resource type="Script" uid="uid://bd4evp6qjakp" path="res://scripts/cidade.gd" id="1_qlh45"]
 [ext_resource type="Texture2D" uid="uid://g1gh20wt4llx" path="res://assets/modelagens/cidade_contraTempo_predios_textura.png" id="2_6qmdn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hrftm"]
@@ -96,7 +97,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_grkrf")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(45.14868, 28.146118, 21.993896)
+
 [node name="cidade" type="Node3D" unique_id=1699463994]
+script = ExtResource("1_qlh45")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1121902767]
 environment = SubResource("Environment_qlh45")
@@ -121,3 +126,11 @@ shape = SubResource("ConcavePolygonShape3D_6qmdn")
 [node name="predios" type="MeshInstance3D" parent="." unique_id=778119523]
 transform = Transform3D(11.292345, 0, 0, 0, 11.292345, 0, 0, 0, 11.292345, -0.9920502, -0.050913364, 0.8958374)
 mesh = SubResource("ArrayMesh_fcwns")
+
+[node name="area_linha_de_chegada" type="Area3D" parent="." unique_id=199240181]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="area_linha_de_chegada" unique_id=784578633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 351.74963, 10.930359, 320.22928)
+shape = SubResource("BoxShape3D_g4v7s")
+
+[connection signal="body_entered" from="area_linha_de_chegada" to="." method="_on_area_linha_de_chegada_body_entered"]
