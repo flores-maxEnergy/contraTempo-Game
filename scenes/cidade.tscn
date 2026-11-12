@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://g1gh20wt4llx" path="res://assets/modelagens/cidade_contraTempo_predios_textura.png" id="2_6qmdn"]
 [ext_resource type="Texture2D" uid="uid://d1lnfcbb7nhw4" path="res://assets/modelagens/cidade_contraTempo_ruatexture_cidade.png" id="4_fcwns"]
 [ext_resource type="PackedScene" uid="uid://bw875kjr0ed1t" path="res://scenes/cone_otimizado.tscn" id="5_iqefc"]
+[ext_resource type="PackedScene" uid="uid://my8vxqy6ki68" path="res://scenes/cone_2_otimizado.tscn" id="6_vkox8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hrftm"]
 sky_top_color = Color(0.31070226, 0.5061255, 0.84415156, 1)
@@ -209,6 +210,9 @@ mesh = SubResource("ArrayMesh_cp173")
 shape = SubResource("ConcavePolygonShape3D_iqefc")
 
 [node name="cone_otimizado" parent="." unique_id=425915186 instance=ExtResource("5_iqefc")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 34.820988, 0.6282058, 41.37403)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 34.820988, 0.43938017, 41.37403)
+
+[node name="cone2_otimizado" parent="." unique_id=1620805369 instance=ExtResource("6_vkox8")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 34.820988, -0.011926889, 45.06224)
 
 [connection signal="body_entered" from="area_linha_de_chegada" to="." method="_on_area_linha_de_chegada_body_entered"]

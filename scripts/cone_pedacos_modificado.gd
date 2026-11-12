@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var intensidade: float = 8.0
+@export var intensidade: float = 2.0
 
 func _ready() -> void:
 	for pedacos : RigidBody3D in self.get_children():

@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bw875kjr0ed1t"]
 
-[ext_resource type="Script" uid="uid://reb203bk7bx" path="res://cone_otimizado.gd" id="1_q6tq2"]
+[ext_resource type="Script" uid="uid://reb203bk7bx" path="res://scripts/cone_otimizado.gd" id="1_q6tq2"]
 [ext_resource type="Texture2D" uid="uid://b5piqolkyacj8" path="res://assets/modelagens/cone_cone_texture.png" id="2_hr2t5"]
 [ext_resource type="PackedScene" uid="uid://od7yn1dait7a" path="res://scenes/cone_pedacos_modificado.tscn" id="2_rsl51"]
 
@@ -52,16 +52,19 @@ points = PackedVector3Array(-1.5135177, -1, -0.0002963543, -1.3985521, -1, -0.57
 script = ExtResource("1_q6tq2")
 cone_quebrado = ExtResource("2_rsl51")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=257578224]
-continuous_cd = true
-contact_monitor = true
-max_contacts_reported = 1
+[node name="RigidBody3D" type="CharacterBody3D" parent="." unique_id=1033749628]
 
 [node name="Cylinder" type="MeshInstance3D" parent="RigidBody3D" unique_id=700662160]
 mesh = SubResource("ArrayMesh_7knla")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1194526910]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RigidBody3D" unique_id=2091901306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.011095762, 0)
+shape = SubResource("ConvexPolygonShape3D_nwb4j")
+
+[node name="area" type="Area3D" parent="." unique_id=1590752032]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="area" unique_id=1194526910]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0.08402133, 0)
 shape = SubResource("ConvexPolygonShape3D_nwb4j")
 
-[connection signal="body_entered" from="RigidBody3D" to="." method="_on_rigid_body_3d_body_entered"]
+[connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]
