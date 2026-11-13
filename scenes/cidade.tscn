@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bw875kjr0ed1t" path="res://scenes/cone_otimizado.tscn" id="5_iqefc"]
 [ext_resource type="PackedScene" uid="uid://my8vxqy6ki68" path="res://scenes/cone_2_otimizado.tscn" id="6_vkox8"]
 [ext_resource type="PackedScene" uid="uid://cg3bbbsg003mq" path="res://scenes/cerca_de_muros.tscn" id="7_3pc5y"]
+[ext_resource type="PackedScene" uid="uid://dks7tcg6od0lo" path="res://scenes/cenario_horizonte.tscn" id="8_cp173"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hrftm"]
 sky_top_color = Color(0.31070226, 0.5061255, 0.84415156, 1)
@@ -229,18 +230,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 350.26514, 0, 222.91954)
 [node name="cerca_de_muros10" parent="muros" unique_id=1338951941 instance=ExtResource("7_3pc5y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 368.4088, 0, 237.40825)
 
-[node name="predios2" type="Node3D" parent="." unique_id=2010032057]
+[node name="cenário" parent="." unique_id=575354836 instance=ExtResource("8_cp173")]
 
-[node name="Plane" type="MeshInstance3D" parent="predios2" unique_id=1854751689]
-transform = Transform3D(11.292345, 0, 0, 0, 11.292345, 0, 0, 0, 11.292345, -433.623, -0.050913364, 0.8958374)
-mesh = SubResource("ArrayMesh_cp173")
+[node name="cenário2" parent="." unique_id=1778052816 instance=ExtResource("8_cp173")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 435.08466, 0, -341.82825)
 
-[node name="predios" type="MeshInstance3D" parent="predios2" unique_id=78663605]
-transform = Transform3D(11.292345, 0, 0, 0, 11.292345, 0, 0, 0, 11.292345, -433.623, -0.050913364, 0.8958374)
-mesh = SubResource("ArrayMesh_j7v2a")
+[node name="cenário3" parent="." unique_id=92882048 instance=ExtResource("8_cp173")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 435.08466, 0, 340.762)
 
-[node name="ruas" type="MeshInstance3D" parent="predios2" unique_id=1631291934]
-transform = Transform3D(11.292345, 0, 0, 0, 11.292345, 0, 0, 0, 11.292345, -433.623, -0.050913364, 0.8958374)
-mesh = SubResource("ArrayMesh_o27u3")
+[node name="cenário4" parent="." unique_id=1600326221 instance=ExtResource("8_cp173")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 868.6292, 0, -0.101135254)
 
 [connection signal="body_entered" from="area_linha_de_chegada" to="." method="_on_area_linha_de_chegada_body_entered"]
