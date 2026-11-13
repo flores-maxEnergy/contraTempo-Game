@@ -1,6 +1,6 @@
 extends VehicleBody3D
 
-var steer = 0.9
+var steer = 0.7
 var power = 800
 
 func _physics_process(delta: float) -> void:

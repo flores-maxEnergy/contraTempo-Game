@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cg3bbbsg003mq"]
+
+[ext_resource type="PackedScene" uid="uid://doi8uvgjv0mv6" path="res://scenes/muro.tscn" id="1_op024"]
+
+[node name="cerca_de_muros" type="Node3D" unique_id=1063063783]
+
+[node name="muro" parent="." unique_id=1079007471 instance=ExtResource("1_op024")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.896278, -0.03269267, -0.06088257)
+
+[node name="muro2" parent="." unique_id=1114623279 instance=ExtResource("1_op024")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.573143, -0.03269267, -0.06088257)
+
+[node name="muro3" parent="." unique_id=42941143 instance=ExtResource("1_op024")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.4564667, -0.03269267, -0.06088257)
+
+[node name="muro4" parent="." unique_id=829888853 instance=ExtResource("1_op024")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.6818542, -0.03269267, -0.06088257)
+
+[node name="muro5" parent="." unique_id=1801987474 instance=ExtResource("1_op024")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.009201, -0.03269267, -0.06088257)
