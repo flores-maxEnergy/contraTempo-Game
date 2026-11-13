@@ -8,6 +8,10 @@
 
 config_version=5
 
+[accessibility]
+
+general/updates_per_second=100
+
 [application]
 
 config/name="contraTempo"
@@ -17,6 +21,8 @@ config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=800
+window/size/viewport_height=400
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

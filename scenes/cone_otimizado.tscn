@@ -64,7 +64,7 @@ shape = SubResource("ConvexPolygonShape3D_nwb4j")
 [node name="area" type="Area3D" parent="." unique_id=1590752032]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="area" unique_id=1194526910]
-transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0.08402133, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.51168156, 0)
 shape = SubResource("ConvexPolygonShape3D_nwb4j")
 
 [connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]

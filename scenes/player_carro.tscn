@@ -44,7 +44,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8toop")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
-size = Vector3(4.1015625, 1.5390625, 1.9324951)
+size = Vector3(4.1015625, 1.5390625, 2.0863647)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k1427"]
 resource_name = "Material.001"
@@ -126,7 +126,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4091816, 0, 0)
 mesh = SubResource("ArrayMesh_b4twq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=616618219]
-transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 0.9999998, 0.6679453, 1.0054389, 0.10707712)
+transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 0.9999998, 0.6679453, 1.0054389, 0.030142322)
 shape = SubResource("BoxShape3D_g4v7s")
 
 [node name="VehicleWheel3D2" type="VehicleWheel3D" parent="." unique_id=1840114101]
@@ -166,4 +166,4 @@ transform = Transform3D(-1.5318264e-08, 0.35044104, -1.5318264e-08, 0, -1.531826
 mesh = SubResource("ArrayMesh_5dqrg")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1751525209]
-transform = Transform3D(-4.371139e-08, 0.39073113, -0.92050487, 0, 0.92050487, 0.39073113, 1, 1.70794e-08, -4.0236547e-08, -3.9092064, 4.068898, 0.02687788)
+transform = Transform3D(-4.371139e-08, 0.39073113, -0.92050487, 0, 0.92050487, 0.39073113, 1, 1.70794e-08, -4.0236547e-08, -3.9092064, 4.068898, -0.03852749)
